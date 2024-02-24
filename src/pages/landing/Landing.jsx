@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <>
     <div className='headshot'>
-        <img src={headshot} alt='headshot' style={{ width: '200px', height: '260px' }}/>
+        <img src={headshot} alt='headshot' className="h-96 w-96 rounded-full object-cover object-center" />
     </div>
     </>
   )
