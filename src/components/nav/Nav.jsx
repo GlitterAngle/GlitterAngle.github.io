@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import React, { useState} from 'react';
-import github from 'src/assets/social_logos/github.png'
-import linkedin from 'src/assets/social_logos/li.png'
-import logo from 'src/assets/logo/lr.png'
+import github from '../../assets/social_logos/github.png'
+import linkedin from '../../assets/social_logos/li.png'
+import logo from '../../assets/logo/lr.png'
 
 const Nav = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
