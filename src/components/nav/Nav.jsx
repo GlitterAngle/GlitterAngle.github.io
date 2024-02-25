@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import React, { useState} from 'react';
-// import github from '../../assets/social_logos/github.png'
-// import linkedin from '../../assets/social_logos/li.png'
-// import logo from '../../assets/logo/lr.png'
+import github from '../../assets/social_logos/github.png'
+import linkedin from '../../assets/social_logos/li.png'
+import logo from '../../assets/Logo/lr.png'
 
 const Nav = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
@@ -19,7 +19,7 @@ const Nav = () => {
           <nav class="flex justify-between text-[#4A4453]">
             <div class="px-5 xl:px-12 py-6 flex w-full items-center">
               <p class="text-3xl font-bold font-heading" href="#">
-                <img class="h-12" src='src/assets/logo/lr.png' alt="logo" />
+                <img class="h-12" src={logo} alt="logo" />
               </p>
               <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><Link to="/" class="hover:text-[#805A73] hover:underline text-[#4A4453]" href="#">Home</Link></li>
@@ -30,21 +30,21 @@ const Nav = () => {
 
               <div class="hidden xl:flex items-center space-x-5 items-center">
                 <a class="flex items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
-                  <img class='h-8' src='src/assets/social_logos/li.png' alt='linkedin' />
+                  <img class='h-8' src={linkedin} alt='linkedin' />
                 </a>
 
                 <a class="flex items-center hover:animate-lift-up " href="https://github.com/GlitterAngle">
-                  <img class='h-8' src='src/assets/social_logos/github.png' alt='github' />
+                  <img class='h-8' src={github} alt='github' />
                 </a>
 
               </div>
             </div>
 
             <a class="xl:hidden flex mr-6 items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
-              <img class='h-8' src='src/assets/social_logos/li.png' alt='linkedin' />
+              <img class='h-8' src={linkedin} alt='linkedin' />
             </a>
             <a class="xl:hidden flex mr-6 items-center hover:animate-lift-up" href="https://github.com/GlitterAngle">
-              <img class='h-8' src='src/assets/social_logos/github.png' alt='github' />
+              <img class='h-8' src={github} alt='github' />
             </a>
             <a class="navbar-burger self-center mr-12 md:hidden" onClick={toggleBurger} href="#">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#4A4453] hover:text-[#805A73]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
