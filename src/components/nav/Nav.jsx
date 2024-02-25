@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import React, { useState } from 'react';
-// import github from '../../assets/social_logos/github.png'
-// import linkedin from '../../assets/social_logos/li.png'
-// import logo from '../../assets/logo/lr.png'
+import React, { useState} from 'react';
+import github from '../../assets/social_logos/github.png'
+import linkedin from '../../assets/social_logos/li.png'
+import logo from '../../assets/Logo/lr.png'
 
 const Nav = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
@@ -13,12 +13,12 @@ const Nav = () => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 right-0 bg-black bg-opacity-5">
-        <section className="relative mx-auto">
-          <nav className="flex justify-between text-[#4A4453]">
-            <div className="px-5 xl:px-12 py-6 flex w-full items-center">
-              <p className="text-3xl font-bold font-heading">
-                <img className="h-12" src='src/assets/logo/lr.png' alt="logo" />
+      <div class="fixed top-0 left-0 right-0 bg-black bg-opacity-5">
+        <section class="relative mx-auto">
+          <nav class="flex justify-between text-[#4A4453]">
+            <div class="px-5 xl:px-12 py-6 flex w-full items-center">
+              <p class="text-3xl font-bold font-heading" href="#">
+                <img class="h-12" src={logo} alt="logo" />
               </p>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><Link to="/" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Home</Link></li>
