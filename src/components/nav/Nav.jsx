@@ -28,18 +28,18 @@ const Nav = () => {
               </ul>
               <div className="hidden xl:flex items-center space-x-5 items-center">
                 <a className="flex items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
-                  <img className='h-8' src='src/assets/social_logos/li.png' alt='linkedin' />
+                  <img className='h-8' src={linkedin} alt='linkedin' />
                 </a>
                 <a className="flex items-center hover:animate-lift-up " href="https://github.com/GlitterAngle">
-                  <img className='h-8' src='src/assets/social_logos/github.png' alt='github' />
+                  <img className='h-8' src={github} alt='github' />
                 </a>
               </div>
             </div>
             <a className="xl:hidden flex mr-6 items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
-              <img className='h-8' src='src/assets/social_logos/li.png' alt='linkedin' />
+              <img className='h-8' src={linkedin} alt='linkedin' />
             </a>
             <a className="xl:hidden flex mr-6 items-center hover:animate-lift-up" href="https://github.com/GlitterAngle">
-              <img className='h-8' src='src/assets/social_logos/github.png' alt='github' />
+              <img className='h-8' src={github} alt='github' />
             </a>
             <a className="navbar-burger self-center mr-12 md:hidden" onClick={toggleBurger} href="#">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#4A4453] hover:text-[#805A73]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
