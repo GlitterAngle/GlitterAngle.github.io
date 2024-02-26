@@ -51,7 +51,7 @@ const Nav = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </a>
-            <div className={`absolute md:relative md:hidden flex flex-col top-full right-0 bg-black bg-opacity-5 transition-transform transition-opacity duration-500 ease-in-out ${burgerOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-0'} md:relative flex md:opacity-100 md:translate-y-0`}>
+            <div className={`absolute md:relative md:hidden flex flex-col top-full right-0 bg-black bg-opacity-5  transition-opacity duration-500 ease-in-out ${burgerOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-0'} md:relative flex md:opacity-100 md:translate-y-0`}>
               <ul className="flex flex-col md:flex-row px-4 mx-auto font-semibold font-heading space-y-2 md:space-y-0 md:space-x-12">
                 <li><Link onClick={handleClick} to="/" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Home</Link></li>
                 <li><Link onClick={handleClick} to="/about" className="hover:text-[#805A73] hover:underline text-[#4A4453]">About</Link></li>
