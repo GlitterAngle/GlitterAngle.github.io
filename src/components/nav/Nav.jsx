@@ -7,24 +7,29 @@ import logo from '../../assets/Logo/lr.png'
 const Nav = () => {
   const [burgerOpen, setBurgerOpen] = useState(false)
 
-  const toggleBurger = () => {
+  const toggleBurger = (e) => {
     setBurgerOpen(!burgerOpen)
+  }
+
+  const handleClick = () =>{
+    setBurgerOpen(false)
   }
 
   return (
     <div>
-      <div class="fixed top-0 left-0 right-0 bg-black bg-opacity-5">
-        <section class="relative mx-auto">
-          <nav class="flex justify-between text-[#4A4453]">
-            <div class="px-5 xl:px-12 py-6 flex w-full items-center">
-              <p class="text-3xl font-bold font-heading" href="#">
-                <img class="h-12" src={logo} alt="logo" />
+      <div className="fixed top-0 left-0 right-0 bg-black bg-opacity-5">
+        <section className="relative mx-auto">
+          <nav className="flex justify-between text-[#4A4453]">
+            <div className="px-5 xl:px-12 py-6 flex w-full items-center">
+              <p className="text-3xl font-bold font-heading" href="#">
+                <img className="h-12" src={logo} alt="logo" />
               </p>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
                 <li><Link to="/" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Home</Link></li>
                 <li><Link to="/about" className="hover:text-[#805A73] hover:underline text-[#4A4453]">About</Link></li>
                 <li><Link to="/projects" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Projects</Link></li>
                 {/* <li><a className="hover:text-gray-200" href="#">Contact Us</Link></li> */}
+                <li><Link to="/contact" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Contact</Link></li>
               </ul>
               <div className="hidden xl:flex items-center space-x-5 items-center">
                 <a className="flex items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
@@ -48,9 +53,10 @@ const Nav = () => {
             </a>
             <div className={`absolute md:relative md:hidden flex flex-col top-full right-0 bg-black bg-opacity-5 transition-transform transition-opacity duration-500 ease-in-out ${burgerOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-0'} md:relative flex md:opacity-100 md:translate-y-0`}>
               <ul className="flex flex-col md:flex-row px-4 mx-auto font-semibold font-heading space-y-2 md:space-y-0 md:space-x-12">
-                <li><Link to="/" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Home</Link></li>
-                <li><Link to="/about" className="hover:text-[#805A73] hover:underline text-[#4A4453]">About</Link></li>
-                <li><Link to="/projects" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Projects</Link></li>
+                <li><Link onClick={handleClick} to="/" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Home</Link></li>
+                <li><Link onClick={handleClick} to="/about" className="hover:text-[#805A73] hover:underline text-[#4A4453]">About</Link></li>
+                <li><Link onClick={handleClick} to="/projects" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Projects</Link></li>
+                <li><Link onClick={handleClick} to="/contact" className="hover:text-[#805A73] hover:underline text-[#4A4453]">Contact</Link></li>
               </ul>
             </div>
           </nav>

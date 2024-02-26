@@ -4,6 +4,7 @@ import Landing from './pages/landing/Landing'
 import About from './pages/about/About'
 import ProjectList from './pages/project_list/ProjectList'
 import SingleProject from './pages/single_project/SingleProject'
+import Contact from './pages/contact/Contact'
 import {Routes, Route} from 'react-router-dom'
 import './App.css'
 
@@ -17,6 +18,7 @@ function App() {
       <Route path="/about" element={<About/>}/>
       <Route path="/projects" element={<ProjectList/>}/>
       {/* <Route path="/:id" element={<SingleProject/>}/> */}
+      <Route path="/contact" element={<Contact/>}/>
     </Routes>
     </>
   )
