@@ -3,7 +3,7 @@ import { useSpring, animated } from '@react-spring/web'
 import ProjectComponent from '../../components/projects/ProjectComponent'
 import ContactComponent from '../../components/contact/ContactComponent'
 import AboutComponent from '../../components/about/AboutComponent'
-import logo from '../../assets/logo/logo2.png'
+import logo from '../../assets/logo/logoHeart.png'
 import Nav from '../../components/nav/Nav'
 
 const Landing = () => {
