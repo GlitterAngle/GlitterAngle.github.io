@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
-import React, { useEffect, useState, forwardRef} from 'react';
+import React, { useEffect, useState, forwardRef } from 'react';
 import github from '../../assets/social_logos/githubWhite.png'
 import linkedin from '../../assets/social_logos/liWhite.png'
 import logo from '../../assets/Logo/logoHeartTransparent.png'
 
-const Nav = forwardRef((props, ref) => {
+const Nav = forwardRef(({aboutSectionRef, projectsSectionRef, contactSectionRef}, ref) => {
   const [burgerOpen, setBurgerOpen] = useState(false)
   const [isFixed, setIsFixed] = useState(false)
 
@@ -12,11 +11,11 @@ const Nav = forwardRef((props, ref) => {
     setBurgerOpen(!burgerOpen)
   }
 
-  const handleClick = () =>{
+  const handleClick = () => {
     setBurgerOpen(false)
   }
 
-  const handleScroll = () =>{
+  const handleScroll = () => {
     const scrollTop = window.scrollY
     const fixedPoint = 800
     if (scrollTop >= fixedPoint) {
@@ -26,13 +25,34 @@ const Nav = forwardRef((props, ref) => {
     }
   }
 
-  useEffect(()=>{
+  const scrollToAbout = () => {
+    if(aboutSectionRef && aboutSectionRef.current){
+      aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    handleClick()
+  }
+
+  const scrollToProjects = () => {
+    if(projectsSectionRefSectionRef && projectsSectionRefSectionRef.current){
+      projectsSectionRefSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    handleClick()
+  }
+
+  const scrollToContact = () => {
+    if(contactSectionRef){
+      contactSectionRef.scrollIntoView()
+    }
+    handleClick()
+  }
+
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  },[])
+  }, [])
 
   return (
     <div ref={ref}>
@@ -44,11 +64,9 @@ const Nav = forwardRef((props, ref) => {
                 <img className="h-20 w-15" src={logo} alt="logo" />
               </p>
               <ul className="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-                <li><Link to="/" className="hover:text-[#805A73] hover:underline ">Home</Link></li>
-                <li><Link to="/about" className="hover:text-[#805A73] hover:underline ">About</Link></li>
-                <li><Link to="/projects" className="hover:text-[#805A73] hover:underline ">Projects</Link></li>
-                {/* <li><a className="hover:text-gray-200" href="#">Contact Us</Link></li> */}
-                <li><Link to="/contact" className="hover:text-[#805A73] hover:underline ">Contact</Link></li>
+                <li onClick={scrollToAbout} className="hover:underline">About</li>
+                <li onClick={scrollToProjects} className="hover:underline">Projects</li>
+                <li onClick={scrollToContact}  className="hover:underline">Contact</li>
               </ul>
               <div className="hidden xl:flex items-center space-x-5 items-center">
                 <a className="flex items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
@@ -72,10 +90,9 @@ const Nav = forwardRef((props, ref) => {
             </a>
             <div className={`absolute md:relative md:hidden flex flex-col top-full right-0 bg-black bg-opacity-5  transition-opacity duration-500 ease-in-out ${burgerOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-0'} md:relative flex md:opacity-100 md:translate-y-0`}>
               <ul className="flex flex-col md:flex-row px-4 mx-auto font-semibold font-heading space-y-2 md:space-y-0 md:space-x-12">
-                <li><Link onClick={handleClick} to="/" className="hover:text-[#805A73] hover:underline ">Home</Link></li>
-                <li><Link onClick={handleClick} to="/about" className="hover:text-[#805A73] hover:underline ">About</Link></li>
-                <li><Link onClick={handleClick} to="/projects" className="hover:text-[#805A73] hover:underline ">Projects</Link></li>
-                <li><Link onClick={handleClick} to="/contact" className="hover:text-[#805A73] hover:underline ">Contact</Link></li>
+                <li onClick={scrollToAbout} className="hover:underline">About</li>
+                <li onClick={scrollToProjects} className="hover:underline">Projects</li>
+                <li onClick={scrollToContact} className="hover:underline">Contact</li>
               </ul>
             </div>
           </nav>

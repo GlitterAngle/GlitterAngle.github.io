@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, forwardRef } from 'react'
 import emailjs from '@emailjs/browser'
 
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
 
   const form = useRef();
 
@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <div className='p-4'>
+    <div ref={ref} className='p-4'>
       <p className='mb-10'>If you'd like to reach me fill out this form!</p>
       <form ref={form} onSubmit={sendEmail} className="bg-transparent col-span-4">
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -48,5 +48,5 @@ const Contact = () => {
       </form>
     </div>
   )
-}
+})
 export default Contact

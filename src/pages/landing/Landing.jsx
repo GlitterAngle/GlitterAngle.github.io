@@ -9,6 +9,9 @@ import Nav from '../../components/nav/Nav'
 const Landing = () => {
   const [flip, setFlip] = useState(false)
   const navRef = useRef(null)
+  const aboutSectionRef = useRef(null)
+  const projectsSectionRef = useRef(null)
+  const contactSectionRef = useRef(null)
 
   const animate = useSpring({
     to: {opacity: 1},
@@ -34,10 +37,10 @@ const Landing = () => {
         <button onClick={scrollToNav} className='bg-transparent underline hover:animate-lift-up'>Enter ?</button>
       </div>
       </animated.div>
-      <Nav ref={navRef}/>
-      <AboutComponent/>
-      <ProjectComponent/>
-      <ContactComponent/>
+      <Nav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/>
+      <AboutComponent ref={aboutSectionRef}/>
+      <ProjectComponent ref={projectsSectionRef}/>
+      <ContactComponent ref={contactSectionRef}/>
     </>
   )
 }

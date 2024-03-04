@@ -1,12 +1,12 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import projectOne from '../../assets/projects/projectOne.png'
 import projectTwo from '../../assets/projects/prjectTwo.png'
 import projectThree from '../../assets/projects/projectThree.png'
 import projectFour from '../../assets/projects/projectFour.png'
 
-const ProjectComponent = () => {
+const ProjectComponent = forwardRef((props, ref) => {
     return (
-        <div className='mt-20'>
+        <div ref={ref} className='mt-20'>
             <div className='grid md:grid-cols-2 p-4 '>
                 <div className=" w-96 rounded-full object-cover object-center row-span-1 place-self-center p-4">
                     <img src={projectOne}></img>
@@ -36,6 +36,6 @@ const ProjectComponent = () => {
             </div>
         </div>
     )
-}
+})
 
 export default ProjectComponent
