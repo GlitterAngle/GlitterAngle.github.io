@@ -33,15 +33,15 @@ const Nav = forwardRef(({aboutSectionRef, projectsSectionRef, contactSectionRef}
   }
 
   const scrollToProjects = () => {
-    if(projectsSectionRefSectionRef && projectsSectionRefSectionRef.current){
-      projectsSectionRefSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    if(projectsSectionRef && projectsSectionRef.current){
+      projectsSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
     handleClick()
   }
 
   const scrollToContact = () => {
-    if(contactSectionRef){
-      contactSectionRef.scrollIntoView()
+    if(contactSectionRef && contactSectionRef.current){
+      contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
     handleClick()
   }
