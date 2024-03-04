@@ -7,7 +7,7 @@ import projectFour from '../../assets/projects/projectFour.png'
 const ProjectComponent = () => {
     return (
         <div className='mt-20'>
-            <div className='grid md:grid-cols-2 border-2 rounded-lg border-dotted border-[#4A4453] p-4 text-[#4A4453]'>
+            <div className='grid md:grid-cols-2 p-4 '>
                 <div className=" w-96 rounded-full object-cover object-center row-span-1 place-self-center p-4">
                     <img src={projectOne}></img>
                     <p>Solo frontend project created with JS HTML and CSS</p>

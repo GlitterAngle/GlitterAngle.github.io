@@ -1,14 +1,43 @@
-import React from 'react'
-import headshot from '../../assets/headshot/Lesley Solarte3299 copy1mb.jpg'
+import React, { useState, useRef, useEffect} from 'react'
+import { useSpring, animated } from '@react-spring/web'
+import ProjectComponent from '../../components/projects/ProjectComponent'
+import ContactComponent from '../../components/contact/ContactComponent'
+import AboutComponent from '../../components/about/AboutComponent'
+import Logo from '../../assets/logo/logo2.png'
+import Nav from '../../components/nav/Nav'
 
 const Landing = () => {
+  const [flip, setFlip] = useState(false)
+  const navRef = useRef(null)
+
+  const animate = useSpring({
+    to: {opacity: 1},
+    from: {opacity: 0},
+    reset: true,
+    reverse: flip,
+    delay: 100,
+    config: { duration: 3000 },
+  })
+
+  const scrollToNav = () => {
+    navRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <>
-      <div className='grid md:grid-cols-2 border-2 rounded-lg border-dotted border-[#4A4453] p-4 text-[#4A4453]'>
-        <img src={headshot} alt='headshot' className="h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
-        <h3 className='place-self-center font-semibold'>Engineering Your Vision <br /> Turning Ideas into Impactful Software</h3>
-        <p>Thank you for stopping by! Your curiosity is the first step to uncovering the unique ways I bring technology to life. Let's explore the possibilities together.</p>
+    <animated.div style={animate}>
+      <div className='h-screen p-4 flex justify-center items-center flex-col'>
+        <img src={Logo} className='h-48 w-90'/>
+        <h2 className='font-semibold text-2xl'>Engineering Your Vision <br /> Turning Ideas into Impactful Software</h2>
+        <br/>
+        <p className='text-lg'>Your curiosity is the first step to uncovering the unique ways I bring technology to life. Let's explore the possibilities together.</p>
+        <button onClick={scrollToNav} className='bg-transparent underline hover:animate-lift-up'>Enter ?</button>
       </div>
+      </animated.div>
+      <Nav ref={navRef}/>
+      <AboutComponent/>
+      <ProjectComponent/>
+      <ContactComponent/>
     </>
   )
 }
