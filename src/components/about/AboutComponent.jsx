@@ -1,8 +1,10 @@
 import React from 'react'
+import headshot from '../../assets/headshot/IMG_6768 2.jpg'
 
 const About = () => {
   return (
-    <div className='border-2 rounded-lg border-dotted border-[#4A4453] p-10 text-[#4A4453] text-left'>
+    <div className='p-10 text-left grid md:grid-cols-2 p-4 mt-60'>
+      <img src={headshot} alt='headshot' className="h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
       <p className='indent-8 mb-8'>
         Hello and welcome! I'm Lesley Rotonto, and I'm thrilled to have you explore my portfolio.
         My journey in web development is fueled by a decade-long background in art and a deep-rooted passion for coding and continuous learning.
