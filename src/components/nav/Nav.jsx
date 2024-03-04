@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React, { useEffect, useState, forwardRef} from 'react';
 import github from '../../assets/social_logos/githubWhite.png'
 import linkedin from '../../assets/social_logos/liWhite.png'
-import logo from '../../assets/Logo/logo5.png'
+import logo from '../../assets/logo/logoHeartTransparent.png'
 
 const Nav = forwardRef((props, ref) => {
   const [burgerOpen, setBurgerOpen] = useState(false)
