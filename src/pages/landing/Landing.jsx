@@ -22,6 +22,21 @@ const Landing = () => {
     config: { duration: 3000 },
   })
 
+  const color = useSpring({
+    loop: true,
+    to: [
+      { color: '#ffaaee' },
+    { color: '#eaffd0' },
+    { color: '#87eaff' },
+    { color: '#ffaaee' },
+    ],
+    from: { color: 'blue' },
+    config: {
+      tension: 120, 
+      friction: 14, 
+    }
+  })
+
   const scrollToNav = () => {
     navRef.current.scrollIntoView({ behavior: 'smooth' })
   }
@@ -34,7 +49,7 @@ const Landing = () => {
         <h2 className='font-semibold text-2xl'>Engineering Your Vision <br /> Turning Ideas into Impactful Software</h2>
         <br/>
         <p className='text-lg'>Your curiosity is the first step to uncovering the unique ways I bring technology to life. Let's explore the possibilities together.</p>
-        <button onClick={scrollToNav} className='bg-transparent underline hover:animate-lift-up'>Enter ?</button>
+        <animated.button style={color} onClick={scrollToNav} className='bg-transparent hover:animate-lift-up'>Enter ?</animated.button>
       </div>
       </animated.div>
       <Nav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/>
