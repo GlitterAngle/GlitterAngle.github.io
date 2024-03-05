@@ -25,12 +25,12 @@ const Landing = () => {
   const color = useSpring({
     loop: true,
     to: [
-      { color: '#ffaaee' },
-    { color: '#eaffd0' },
-    { color: '#87eaff' },
-    { color: '#ffaaee' },
+      { color: '#00D9E0' },
+    { color: '#38E7C8' },
+    { color: '#7BF1A8' },
+    { color: '#00D9E0' },
     ],
-    from: { color: 'blue' },
+    from: { color: '#27C8EA' },
     config: {
       tension: 120, 
       friction: 14, 
@@ -49,7 +49,7 @@ const Landing = () => {
         <h2 className='font-semibold text-2xl'>Engineering Your Vision <br /> Turning Ideas into Impactful Software</h2>
         <br/>
         <p className='text-lg'>Your curiosity is the first step to uncovering the unique ways I bring technology to life. Let's explore the possibilities together.</p>
-        <animated.button style={color} onClick={scrollToNav} className='bg-transparent hover:animate-lift-up'>Enter ?</animated.button>
+        <animated.button style={color} onClick={scrollToNav} className='bg-transparent text-lg hover:animate-lift-up'>Enter</animated.button>
       </div>
       </animated.div>
       <Nav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/>

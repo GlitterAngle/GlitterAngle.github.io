@@ -15,12 +15,12 @@ const About = forwardRef((props, ref) => {
   const color = useSpring({
     loop: true,
     to: [
-      { borderColor: '#ffaaee' },
-    { borderColor: '#eaffd0' },
-    { borderColor: '#87eaff' },
-    { borderColor: '#ffaaee' },
+      { borderColor: '#00D9E0' },
+    { borderColor: '#38E7C8' },
+    { borderColor: '#7BF1A8' },
+    { borderColor: '#00D9E0' },
     ],
-    from: { borderColor: 'blue' },
+    from: { borderColor: '#27C8EA' },
     config: {
       tension: 120, 
       friction: 14, 
