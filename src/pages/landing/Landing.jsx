@@ -5,6 +5,7 @@ import ContactComponent from '../../components/contact/ContactComponent'
 import AboutComponent from '../../components/about/AboutComponent'
 import logo from '../../assets/Logo/logoHeart.png'
 import Nav from '../../components/nav/Nav'
+import NewNav from '../../components/nav/NewNave'
 
 const Landing = () => {
   const [flip, setFlip] = useState(false)
@@ -52,7 +53,8 @@ const Landing = () => {
         <animated.button style={color} onClick={scrollToNav} className='bg-transparent text-lg hover:animate-lift-up'>Enter</animated.button>
       </div>
       </animated.div>
-      <Nav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/>
+      {/* <Nav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/> */}
+      <NewNav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/>
       <AboutComponent ref={aboutSectionRef}/>
       <ProjectComponent ref={projectsSectionRef}/>
       <ContactComponent ref={contactSectionRef}/>

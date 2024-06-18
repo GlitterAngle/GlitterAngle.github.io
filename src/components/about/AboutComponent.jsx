@@ -28,7 +28,7 @@ const About = forwardRef((props, ref) => {
   })
   return (
     <>
-    <div ref={ref} className='p-10 text-left grid md:grid-cols-2 p-4 mt-60'>
+    <div id='about' ref={ref} className='p-10 text-left grid md:grid-cols-2 p-4 mt-60'>
       <animated.img style={color} src={headshot} alt='headshot' className="border-2 h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
       <p className='indent-8 mb-8'>
         Hello and welcome! I'm Lesley Rotonto, and I'm thrilled to have you explore my portfolio.
