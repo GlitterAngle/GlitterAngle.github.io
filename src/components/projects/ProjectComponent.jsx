@@ -4,9 +4,9 @@ import projectTwo from '../../assets/projects/prjectTwo.png'
 import projectThree from '../../assets/projects/projectThree.png'
 import projectFour from '../../assets/projects/projectFour.png'
 
-const ProjectComponent = forwardRef((props, ref) => {
+const ProjectComponent = forwardRef(() => {
     return (
-        <div ref={ref} className='mt-20'>
+        <div id='projects' className='mt-20'>
             <div className='grid md:grid-cols-2 p-4 '>
                 <div className=" w-96 rounded-full object-cover object-center row-span-1 place-self-center p-4">
                     <img src={projectOne}></img>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, forwardRef } from 'react';
+import {Link, useNavigate} from 'react-router-dom'
 import github from '../../assets/social_logos/githubWhite.png'
 import linkedin from '../../assets/social_logos/liWhite.png'
 import logo from '../../assets/Logo/logoHeartTransparent.png'
@@ -7,7 +8,7 @@ const Nav = forwardRef(({aboutSectionRef, projectsSectionRef, contactSectionRef}
   const [burgerOpen, setBurgerOpen] = useState(false)
   const [isFixed, setIsFixed] = useState(false)
 
-  const toggleBurger = (e) => {
+  const toggleBurger = () => {
     setBurgerOpen(!burgerOpen)
   }
 
