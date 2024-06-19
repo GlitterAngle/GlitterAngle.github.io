@@ -6,5 +6,19 @@
 }
 
 
+/* App.css */
+/* App.css */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  background: linear-gradient(to right top, #c8b9e0, #ffb7dc, #ffbab7, #ffd286, #f9f871);
+  background-size: 200% 200%;
+  animation: gradientBackground 15s infinite;
+  transition: background-color 1s ease-in-out;
+}
 
 
