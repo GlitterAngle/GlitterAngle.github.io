@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect} from 'react'
+import React, { useState} from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import ProjectComponent from '../../components/projects/ProjectComponent'
 import ContactComponent from '../../components/contact/ContactComponent'
@@ -9,10 +9,6 @@ import NewNav from '../../components/nav/NewNave'
 
 const Landing = () => {
   const [flip, setFlip] = useState(false)
-  const navRef = useRef(null)
-  const aboutSectionRef = useRef(null)
-  const projectsSectionRef = useRef(null)
-  const contactSectionRef = useRef(null)
 
   const animate = useSpring({
     to: {opacity: 1},
@@ -23,41 +19,21 @@ const Landing = () => {
     config: { duration: 3000 },
   })
 
-  const color = useSpring({
-    loop: true,
-    to: [
-      { color: '#00D9E0' },
-    { color: '#38E7C8' },
-    { color: '#7BF1A8' },
-    { color: '#00D9E0' },
-    ],
-    from: { color: '#27C8EA' },
-    config: {
-      tension: 120, 
-      friction: 14, 
-    }
-  })
-
-  const scrollToNav = () => {
-    navRef.current.scrollIntoView({ behavior: 'smooth' })
-  }
 
   return (
     <>
-    <animated.div style={animate}>
+    <NewNav/>
+    <animated.div style={animate} >
       <div className='h-screen p-4 flex justify-center items-center flex-col'>
         <img src={logo} alt='Logo' className='h-48 w-90'/>
         <h2 className='font-semibold text-2xl'>Engineering Your Vision <br /> Turning Ideas into Impactful Software</h2>
         <br/>
         <p className='text-lg'>Your curiosity is the first step to uncovering the unique ways I bring technology to life. Let's explore the possibilities together.</p>
-        <animated.button style={color} onClick={scrollToNav} className='bg-transparent text-lg hover:animate-lift-up'>Enter</animated.button>
       </div>
       </animated.div>
-      {/* <Nav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/> */}
-      <NewNav ref={navRef} aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} contactSectionRef={contactSectionRef}/>
-      <AboutComponent ref={aboutSectionRef}/>
-      <ProjectComponent ref={projectsSectionRef}/>
-      <ContactComponent ref={contactSectionRef}/>
+      <AboutComponent />
+      <ProjectComponent />
+      <ContactComponent />
     </>
   )
 }
