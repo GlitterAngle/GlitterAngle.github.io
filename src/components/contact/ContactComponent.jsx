@@ -31,15 +31,15 @@ const Contact = forwardRef(() => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
             {/* <label>Name</label> */}
-            <input type="text" name="name" placeholder='Name' className="placeholder-white bg-transparent border-b border-[#4A4453] w-full" />
+            <input type="text" name="name" placeholder='Name' className="placeholder-black bg-transparent border-b border-[#4A4453] w-full" />
           </div>
           <div>
             {/* <label>Email</label> */}
-            <input type="email" name="email" placeholder='Email' className="placeholder-white bg-transparent border-b border-[#4A4453] w-full" />
+            <input type="email" name="email" placeholder='Email' className="placeholder-black bg-transparent border-b border-[#4A4453] w-full" />
           </div>
           <div className='md:col-span-2'>
             {/* <label>Message</label> */}
-            <textarea name="message" placeholder='Message' className="placeholder-white bg-transparent border-b border-[#4A4453] w-full h-32" />
+            <textarea name="message" placeholder='Message' className="placeholder-black bg-transparent border-b border-[#4A4453] w-full h-32" />
           </div>
           <div className='md:col-span-2'>
             <button className='hover:underline w-full' type="submit">Send</button>

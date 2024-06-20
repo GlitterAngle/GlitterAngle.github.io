@@ -1,15 +1,15 @@
 import React, { forwardRef } from 'react';
 import { useSpring, animated } from '@react-spring/web'
 import headshot from '../../assets/headshot/IMG_6768 2.jpg'
-import css from '../../assets/tech/css.png'
-import express from '../../assets/tech/expressjs.png'
-import git from '../../assets/tech/git.png'
-import html from '../../assets/tech/HTML5_Badge.png'
-import javascript from '../../assets/tech/javascript-1.png'
-import mongo from '../../assets/tech/MongoDB_Logomark_ForestGreen.png'
-import node from '../../assets/tech/nodejs-icon.png'
-import react from '../../assets/tech/react-2.png'
-import psql from '../../assets/tech/psql.png'
+import css from '../../assets/tech/css-3.svg'
+import express from '../../assets/tech/expressjs-icon.svg'
+import git from '../../assets/tech/git-icon.svg'
+import html from '../../assets/tech/HTML5_Badge.svg'
+import javascript from '../../assets/tech/javascript-1.svg'
+import mongo from '../../assets/tech/MongoDB_Logomark_ForestGreen.svg'
+import node from '../../assets/tech/nodejs-icon.svg'
+import react from '../../assets/tech/react-2.svg'
+import psql from '../../assets/tech/postgresql-plain.svg'
 
 const About = forwardRef(() => {
   const color = useSpring({
