@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { useSpring, animated } from '@react-spring/web'
-import headshot from '../../assets/headshot/IMG_6768 2.jpg'
+import headshot from '../../assets/headshot/newheadshot.jpg'
 import css from '../../assets/tech/css-3.svg'
 import express from '../../assets/tech/expressjs-icon.svg'
 import git from '../../assets/tech/git-icon.svg'
