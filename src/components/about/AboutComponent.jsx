@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { useSpring, animated } from '@react-spring/web'
-import headshot from '../../assets/headshot/newheadshot.jpg'
+import headshot from '../../assets/headshot/DSC01508-Edit.jpg'
 import css from '../../assets/tech/css-3.svg'
 import express from '../../assets/tech/expressjs-icon.svg'
 import git from '../../assets/tech/git-icon.svg'
@@ -12,24 +12,11 @@ import react from '../../assets/tech/react-2.svg'
 import psql from '../../assets/tech/postgresql-plain.svg'
 
 const About = forwardRef(() => {
-  const color = useSpring({
-    loop: true,
-    to: [
-      { borderColor: '#00D9E0' },
-    { borderColor: '#38E7C8' },
-    { borderColor: '#7BF1A8' },
-    { borderColor: '#00D9E0' },
-    ],
-    from: { borderColor: '#27C8EA' },
-    config: {
-      tension: 120, 
-      friction: 14, 
-    }
-  })
+  
   return (
     <>
     <div id='about' className='p-10 text-left grid md:grid-cols-2 p-4 mt-60'>
-      <animated.img style={color} src={headshot} alt='headshot' className="border-2 h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
+      <img src={headshot} alt='headshot' className="border-2 h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
       <p className='indent-8 mb-8'>
         Hello and welcome! I'm Lesley Rotonto, and I'm thrilled to have you explore my portfolio.
         My journey in web development is fueled by a decade-long background in art and a deep-rooted passion for coding and continuous learning.
@@ -44,7 +31,7 @@ const About = forwardRef(() => {
       
     </div>
     <div className='flex justify-center w-full'>
-    <animated.div style={color} className='border-2 p-4 rounded-lg
+    <div className='border-2 p-4 rounded-lg
 
 w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
         <div className='flex justify-center items-center col-span-full'><img src={react} className='h-26 w-16'/></div>
@@ -56,7 +43,7 @@ w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
         <div className='flex justify-center items-center'><img src={javascript} className='h-26 w-16'/></div>
         <div className='flex justify-center items-center'><img src={git} className='h-26 w-16'/></div>
         <div className='flex justify-center items-center'><img src={html} className='h-26 w-16'/></div>
-    </animated.div>
+    </div>
       </div>
       </>
   )
