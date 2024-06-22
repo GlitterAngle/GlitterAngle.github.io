@@ -1,12 +1,27 @@
-import React from 'react'
-import { useSpring, animated, useTransition } from '@react-spring/web'
+import React, { useEffect, useState } from 'react'
+import { useSpring, animated} from '@react-spring/web'
 import ProjectComponent from '../../components/projects/ProjectComponent'
 import ContactComponent from '../../components/contact/ContactComponent'
 import AboutComponent from '../../components/about/AboutComponent'
 import NewNav from '../../components/nav/NewNave'
 import newLogo from '../../assets/Logo/LogoBlack.png'
+import './Landing.css'
 
 const Landing = () => {
+  const [displayText, setDisplayText] = useState('')
+
+  useEffect(() =>{
+    const text = "Let's explore the possibilities together!"
+    let index = 0
+    const interval = setInterval(() =>{
+      setDisplayText((prev)=>prev+(text[index]||''))
+      index++
+      if(index === text.length){
+        clearInterval(interval)
+      }
+    },100)
+    return ()=>clearInterval(interval)
+  },[])
 
   const movement = useSpring({
     from: { clipPath: 'inset(100% 0% 0% 0%)' },
@@ -15,12 +30,6 @@ const Landing = () => {
   })
 
 
-  const pTransitions =  useSpring({
-    from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
-    to: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    config: { duration: 1000},
-    delay: 500 
-  })
 
   return (
     <>
@@ -35,9 +44,10 @@ const Landing = () => {
             </h2>
           </div>
           <br />
-          <animated.p style={pTransitions} className='text-lg text-center'>
-            Your curiosity is the first step to uncovering the unique ways I bring technology to life. Let's explore the possibilities together.
-          </animated.p>
+          <p className='text-lg text-center'>
+            {displayText}
+            <span className="blinking-cursor">|</span>
+          </p>
         </div>
       </animated.div>
       <AboutComponent />
