@@ -11,7 +11,7 @@ const Landing = () => {
   const [displayText, setDisplayText] = useState('')
 
   useEffect(() =>{
-    const text = "Let's explore the possibilities together!"
+    const text = "Leet's explore the possibilities together!"
     let index = 0
     const interval = setInterval(() =>{
       setDisplayText((prev)=>prev+(text[index]||''))
