@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        customBrown: '#703543',
+      },
       transitionProperty: {
         'height': 'height',
         'spacing': 'margin, padding',
@@ -18,7 +21,7 @@ export default {
             transform: 'translateY(0)',
           },
           '50%': {
-            transform: 'translateY(-10px)', /* Adjust this value for more or less lift */
+            transform: 'translateY(-10px)', 
           },
           '100%': {
             transform: 'translateY(0)',
