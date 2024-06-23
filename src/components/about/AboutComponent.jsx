@@ -34,8 +34,8 @@ const About = forwardRef(() => {
         </div>
       </div>
       <div className='flex justify-center w-full'>
-        <div className='border-2 border-customBrown p-4 rounded-lg w-full grid grid-cols-2 sm:grid-cols-4 gap-4'>
-          <div className='flex justify-center items-center col-span-full'>
+        <div className='border-2 border-customBrown p-4 rounded-lg w-full max-w-screen-md grid grid-cols-2 gap-4'>
+          <div className='flex justify-center items-center'>
             <img src={react} className='h-16 w-16 md:h-26 md:w-16' />
           </div>
           <div className='flex justify-center items-center'>
@@ -45,7 +45,7 @@ const About = forwardRef(() => {
             <img src={psql} className='h-16 w-16 md:h-26 md:w-16' />
           </div>
           <div className='flex justify-center items-center'>
-            <img src={mongo} className='h-16 w-10 md:h-26 md:w-10' />
+            <img src={mongo} className='h-16 w-16 md:h-26 md:w-16' />
           </div>
           <div className='flex justify-center items-center'>
             <img src={node} className='h-16 w-16 md:h-26 md:w-16' />
