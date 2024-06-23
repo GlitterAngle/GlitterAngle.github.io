@@ -16,7 +16,7 @@ const About = forwardRef(() => {
   return (
     <>
     <div id='about' className='p-10 text-left grid md:grid-cols-2 p-4 mt-60'>
-      <img src={headshot} alt='headshot' className="border-2 h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
+      <img src={headshot} alt='headshot' className="border-2 border-customBrown h-96 w-96 rounded-full object-cover object-center row-span-2 place-self-center" />
       <p className='indent-8 mb-8'>
         Hello and welcome! I'm Lesley Rotonto, and I'm thrilled to have you explore my portfolio.
         My journey in web development is fueled by a decade-long background in art and a deep-rooted passion for coding and continuous learning.
@@ -31,7 +31,7 @@ const About = forwardRef(() => {
       
     </div>
     <div className='flex justify-center w-full'>
-    <div className='border-2 p-4 rounded-lg
+    <div className='border-2 border-customBrown p-4 rounded-lg
 
 w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
         <div className='flex justify-center items-center col-span-full'><img src={react} className='h-26 w-16'/></div>
