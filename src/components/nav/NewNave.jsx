@@ -19,6 +19,7 @@ const NewNav = () => {
         const yOffset = -100; 
         const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
+        setIsOpen(false)
     }
 
     return (
@@ -28,16 +29,16 @@ const NewNav = () => {
                     <Link className="flex items-center space-x-3 rtl:space-x-reverse" to='/' onClick={() => {
                         window.scrollTo(0, 0)
                     }}>
-                        <img className="h-20 w-15" src={logo} alt="logo" />
-                        <p>Lesley Rotonto</p>
+                        <img className="h-10 w-10 md:h-20 w-15" src={logo} alt="logo" />
+                        <p className="hidden md:block">Lesley Rotonto</p>
                     </Link>
                 </div>
                 <div className="flex items-center space-x-5 items-center">
                     <a className="flex items-center hover:animate-lift-up" href="https://www.linkedin.com/in/lesley-rotonto/">
-                        <img className='h-8' src={linkedin} alt='linkedin' />
+                        <img className='h-5 md:h-8' src={linkedin} alt='linkedin' />
                     </a>
                     <a className="flex items-center hover:animate-lift-up " href="https://github.com/GlitterAngle">
-                        <img className='h-8' src={github} alt='github' />
+                        <img className='h-5 md:h-8' src={github} alt='github' />
                     </a>
                 </div>
                 <button onClick={toggleMenu} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-black-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-black dark:text-black dark:focus:ring-black" aria-controls="navbar-default" aria-expanded="false">
