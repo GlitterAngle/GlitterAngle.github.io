@@ -29,7 +29,7 @@ const NewNav = () => {
                     <Link className="flex items-center space-x-3 rtl:space-x-reverse" to='/' onClick={() => {
                         window.scrollTo(0, 0)
                     }}>
-                        <img className="h-10 w-10 md:h-20 w-15" src={logo} alt="logo" />
+                        <img className="h-10 w-10 md:h-20 w-20" src={logo} alt="logo" />
                         <p className="hidden md:block">Lesley Rotonto</p>
                     </Link>
                 </div>
