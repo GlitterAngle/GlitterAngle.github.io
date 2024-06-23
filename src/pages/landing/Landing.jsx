@@ -35,16 +35,16 @@ const Landing = () => {
     <>
     <NewNav/>
     <animated.div style={movement}>
-        <div className='h-screen p-4 flex flex-col justify-center items-center'>
-          <div className='flex flex-row items-center space-x-4'>
-            <img src={newLogo} alt='Logo' className='h-48 w-90' />
-            <h2 className='font-semibold text-2xl text-center'>
+        <div className='min-h-screen p-4 flex flex-col justify-center items-center'>
+          <div className='flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0'>
+            <img src={newLogo} alt='Logo' className=' he-24 w-24 md:h-48 md:w-48' />
+            <h2 className='font-semibold text-xl md:text-2xl text-center'>
               Hi I'm Lesley! <br />
               Engineering Your Vision <br /> Turning Ideas into Impactful Software
             </h2>
           </div>
           <br />
-          <p className='text-lg text-center'>
+          <p className='text-base md:text-lg text-center'>
             {displayText}
             <span className="blinking-cursor">|</span>
           </p>
