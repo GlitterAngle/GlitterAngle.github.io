@@ -35,7 +35,7 @@ const About = forwardRef(() => {
           </p>
         </div>
       </div>
-    <div className='p-20 lf:p-10 flex justify-center w-full gap-4 mt-20 lg:mt-60 '>
+    <div className='p-20 lf:p-10 flex justify-center w-full gap-4 mt-20'>
     <div className='border-2 border-customBrown p-4 rounded-lg w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
         <div className='flex justify-center items-center col-span-full'><img src={react} className='h-26 w-16'/></div>
         <div className='flex justify-center items-center'><img src={css} className='h-26 w-16'/></div>
