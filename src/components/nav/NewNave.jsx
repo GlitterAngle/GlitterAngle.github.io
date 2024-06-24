@@ -24,7 +24,7 @@ const NewNav = () => {
 
     return (
         <nav className="bg-black bg-opacity-0 fixed w-full z-20 top-0 start-0 ">
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                     <Link className="flex items-center space-x-3 rtl:space-x-reverse" to='/' onClick={() => {
                         window.scrollTo(0, 0)
@@ -49,7 +49,7 @@ const NewNav = () => {
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-default">
                     <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-black rounded-lg bg-customBrown-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent dark:bg-customBrown dark:bg-opacity-75 md:dark:bg-transparent dark:border-black">
                         {navLinks.map((link, linkIndx) => (
-                            <li key={linkIndx} className="block py-2 px-3 text-black-900 rounded hover:bg-customBrown-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:underline dark:hover:text-black md:dark:hover:bg-transparent">
+                            <li key={linkIndx} className="block py-2 px-3 text-black-900 rounded hover:bg-customBrown-100 md:hover:bg-transparent md:border-0 md:p-0 dark:text-black dark:hover:underline dark:hover:text-black md:dark:hover:bg-transparent">
                                 <a href={`#${link.toLowerCase()}`} onClick={(event) => handleSmoothScroll(event, link)}>
                                     {link}</a>
                             </li>
