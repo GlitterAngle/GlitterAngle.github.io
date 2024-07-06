@@ -15,27 +15,27 @@ const About = forwardRef(() => {
   
   return (
     <>
-    <div id='about' className='p-4 lg:p-10 text-left grid grid-cols-1 md:grid-cols-2 gap-4 mt-20 lg:mt-60'>
+    <div id='about' className='p-4 lg:p-10 text-left grid grid-cols-1 md:grid-cols-2 gap-2 mt-20 lg:mt-60'>
         <img
           src={headshot}
           alt='headshot'
           className="border-2 border-customBrown h-48 w-48 md:h-96 md:w-96 lg:h-90 lg:w-90 rounded-full object-cover object-center place-self-center lg:row-span-2"
         />
         <div className='space-y-8'>
-          <p className='indent-8 mb-8 max-w-xs sm:max-w-sm mx-auto lg:max-w-full'>
+          <p className='indent-8 mb-8 max-w-xs sm:max-w-sm mx-auto lg:max-w-full lg:text-xl'>
             Hello and welcome! I'm Lesley Rotonto, and I'm thrilled to have you explore my portfolio.
             My journey in web development is fueled by a decade-long background in art and a deep-rooted passion for coding and continuous learning.
             My experience in retail has sharpened my communication skills, enabling me to effectively connect and collaborate.
             I bring a unique blend of artistic vision and technical skill to every project, driven by my innate curiosity and a desire to delve into the intricacies of web technologies.
           </p>
-          <p className='indent-8 mb-8 max-w-xs sm:max-w-sm mx-auto lg:max-w-full'>
+          <p className='indent-8 mb-8 max-w-xs sm:max-w-sm mx-auto lg:max-w-full lg:text-xl'>
             My path has been shaped by self-learning and exploring various point-of-sale systems, demonstrating my adaptability and problem-solving skills.
             As I seek to join a team that values growth and innovation, I am excited to contribute my creativity, dedication, and collaborative spirit.
             Thank you for taking the time to get to know me a little better – I look forward to the opportunity to learn, create, and grow together.
           </p>
         </div>
       </div>
-    <div className='p-20 lf:p-10 flex justify-center w-full gap-4 mt-20'>
+    <div className='p-20 flex justify-center w-full gap-4 mt-20'>
     <div className='border-2 border-customBrown p-4 rounded-lg w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
         <div className='flex justify-center items-center col-span-full'><img src={react} className='h-26 w-16'/></div>
         <div className='flex justify-center items-center'><img src={css} className='h-26 w-16'/></div>
