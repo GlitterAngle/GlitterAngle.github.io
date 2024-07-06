@@ -23,18 +23,19 @@ const Landing = () => {
     return ()=>clearInterval(interval)
   },[])
 
-  const movement = useSpring({
-    from: { clipPath: 'inset(100% 0% 0% 0%)' },
-    to: { clipPath: 'inset(0% 0% 0% 0%)' },
-    config: { duration: 1000 },
-  })
+  // const movement = useSpring({
+  //   from: { clipPath: 'inset(100% 0% 0% 0%)' },
+  //   to: { clipPath: 'inset(0% 0% 0% 0%)' },
+  //   config: { duration: 1000 },
+  // })
 
 
 
   return (
     <>
     <NewNav/>
-    <animated.div style={movement}>
+    {/* style={movement} */}
+    <animated.div >
         <div className='min-h-screen p-4 flex flex-col justify-center items-center'>
           <div className='flex flex-col md:flex-row items-center space-x-0 md:space-x-4 space-y-4 md:space-y-0'>
             <img src={newLogo} alt='Logo' className=' he-24 w-24 md:h-48 md:w-48' />
