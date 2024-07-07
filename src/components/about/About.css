@@ -1,0 +1,13 @@
+.circle-container {
+    position: relative;
+    width: 150px;
+    height: 300px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .tech-logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+  }

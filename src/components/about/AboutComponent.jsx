@@ -1,21 +1,62 @@
-import React, { forwardRef } from 'react';
-import { useSpring, animated } from '@react-spring/web'
-import headshot from '../../assets/headshot/DSC01508-Edit.jpg'
-import css from '../../assets/tech/css-3.svg'
-import express from '../../assets/tech/expressjs-icon.svg'
-import git from '../../assets/tech/git-icon.svg'
-import html from '../../assets/tech/HTML5_Badge.svg'
-import javascript from '../../assets/tech/javascript-1.svg'
-import mongo from '../../assets/tech/MongoDB_Logomark_ForestGreen.svg'
-import node from '../../assets/tech/nodejs-icon.svg'
-import react from '../../assets/tech/react-2.svg'
-import psql from '../../assets/tech/postgresql-plain.svg'
+import React, { forwardRef, useEffect, useRef } from 'react';
+import headshot from '../../assets/headshot/DSC01508-Edit.jpg';
+import css from '../../assets/tech/css-3.svg';
+import express from '../../assets/tech/expressjs-icon.svg';
+import git from '../../assets/tech/git-icon.svg';
+import html from '../../assets/tech/HTML5_Badge.svg';
+import javascript from '../../assets/tech/javascript-1.svg';
+import mongo from '../../assets/tech/MongoDB_Logomark_ForestGreen.svg';
+import node from '../../assets/tech/nodejs-icon.svg';
+import react from '../../assets/tech/react-2.svg';
+import psql from '../../assets/tech/postgresql-plain.svg';
+import './About.css';
+
+const logos = [
+  { src: react, alt: 'React' },
+  { src: css, alt: 'CSS' },
+  { src: psql, alt: 'PSQL' },
+  { src: mongo, alt: 'MongoDB' },
+  { src: node, alt: 'Node' },
+  { src: express, alt: 'Express' },
+  { src: javascript, alt: 'JavaScript' },
+  { src: git, alt: 'Git' },
+  { src: html, alt: 'HTML' }
+];
 
 const About = forwardRef(() => {
-  
+  const containerRef = useRef(null)
+
+  useEffect(()=>{
+    const container = containerRef.current
+    const radius  = 150
+    const centerX = container.offsetWidth / 2
+    const centerY = container.offsetHeight / 2
+    const duration = 30
+    const images = container.querySelectorAll('.tech-logo')
+
+    images.forEach((img,index)=>{
+      const angle = (2 * Math.PI/logos.length) * index 
+      img.style.left = `${centerX + radius * Math.cos(angle) - img.offsetWidth / 2}px`
+      img.style.top = `${centerY + radius * Math.sin(angle) - img.offsetHeight / 2}px`
+
+      let start
+      const animate = (timestamp) =>{
+        if(!start) start = timestamp
+        const progress = (timestamp - start) / (duration * 1000)
+        const currentAngle = angle + progress * 2 * Math.PI
+
+        img.style.left = `${centerX + radius * Math.cos(currentAngle) - img.offsetWidth / 2}px`
+        img.style.top = `${centerY + radius * Math.sin(currentAngle) - img.offsetHeight / 2}px`
+
+        requestAnimationFrame(animate)
+      }
+      requestAnimationFrame(animate)
+      
+    })
+  }, [])
   return (
     <>
-    <div id='about' className='p-4 lg:p-10 text-left grid grid-cols-1 md:grid-cols-2 gap-2 mt-20 lg:mt-60'>
+      <div id='about' className='p-4 lg:p-10 text-left grid grid-cols-1 md:grid-cols-2 gap-2 mt-20 lg:mt-60'>
         <img
           src={headshot}
           alt='headshot'
@@ -35,21 +76,20 @@ const About = forwardRef(() => {
           </p>
         </div>
       </div>
-    <div className='p-20 flex justify-center w-full gap-4 mt-20'>
-    <div className='border-2 border-customBrown p-4 rounded-lg w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-4'>
-        <div className='flex justify-center items-center col-span-full'><img src={react} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={css} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={psql} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={mongo} className='h-26 w-10'/></div>
-        <div className='flex justify-center items-center'><img src={node} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={express} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={javascript} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={git} className='h-26 w-16'/></div>
-        <div className='flex justify-center items-center'><img src={html} className='h-26 w-16'/></div>
-    </div>
+      <div className='p-20 flex justify-center w-full gap-4 mt-20'>
+        <div className='circle-container' ref={containerRef}>
+          {logos.map((logo, index) =>( 
+              <img
+                key={index}
+                src={logo.src}
+                alt={logo.alt}
+                className='tech-logo'
+              />
+          ))}
+        </div>
       </div>
-      </>
-  )
-})
+    </>
+  );
+});
 
-export default About
+export default About;
