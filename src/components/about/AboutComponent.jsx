@@ -9,11 +9,13 @@ import mongo from '../../assets/tech/MongoDB_Logomark_ForestGreen.svg';
 import node from '../../assets/tech/nodejs-icon.svg';
 import react from '../../assets/tech/react-2.svg';
 import psql from '../../assets/tech/postgresql-plain.svg';
+import typeScript from '../../assets/tech/ts-logo-512.svg';
 import './About.css';
 
 const logos = [
   { src: react, alt: 'React' },
   { src: css, alt: 'CSS' },
+  { src: typeScript, alt: 'TypeScript'},
   { src: psql, alt: 'PSQL' },
   { src: mongo, alt: 'MongoDB' },
   { src: node, alt: 'Node' },
@@ -28,13 +30,20 @@ const About = forwardRef(() => {
 
   useEffect(()=>{
     const container = containerRef.current
-    const radius  = 150
-    const centerX = container.offsetWidth / 2
-    const centerY = container.offsetHeight / 2
-    const duration = 30
-    const images = container.querySelectorAll('.tech-logo')
 
-    images.forEach((img,index)=>{
+    const updateLogoPostions = () =>{
+      let radius = 0
+      const centerX = container.offsetWidth / 2
+      const centerY = container.offsetHeight / 2
+      const duration = 30
+      const images = container.querySelectorAll('.tech-logo')
+
+      if(window.innerWidth <= 760){
+        radius  = 125
+      }else{
+        radius = 250
+      }
+      images.forEach((img,index)=>{
       const angle = (2 * Math.PI/logos.length) * index 
       img.style.left = `${centerX + radius * Math.cos(angle) - img.offsetWidth / 2}px`
       img.style.top = `${centerY + radius * Math.sin(angle) - img.offsetHeight / 2}px`
@@ -53,6 +62,13 @@ const About = forwardRef(() => {
       requestAnimationFrame(animate)
       
     })
+    }
+    updateLogoPostions()
+    window.addEventListener('resize', updateLogoPostions)
+
+    return () =>{
+      window.removeEventListener('resize', updateLogoPostions)
+    }
   }, [])
   return (
     <>
