@@ -13,16 +13,11 @@ const projects = [
         links: [{href:'https://www.offbend.com/'}]
     },
     {
-        img: projectOne,
-        description: 'Solo frontend project created with JS HTML and CSS',
-        links: [{ href: 'https://github.com/GlitterAngle/Pong', text: 'Code' }]
-    },
-    {
-        img: projectTwo,
-        description: 'Solo fullstack project created with JS MongoDB and NodeJS',
+        img: projectFour,
+        description: 'Fullstack project created with ReactJS Python and SQL',
         links: [
-            { href: 'https://github.com/GlitterAngle/Recipe-Backend-', text: 'Backend Code' },
-            { href: 'https://github.com/GlitterAngle/Recipe-Frontend', text: 'Frontend Code' }
+            { href: 'https://github.com/GlitterAngle/Vogue-Estate-Backend', text: 'Backend Code' },
+            { href: 'https://github.com/GlitterAngle/Vogue-Estates-FrontEnd', text: 'Frontend Code' }
         ]
     },
     {
@@ -34,12 +29,17 @@ const projects = [
         ]
     },
     {
-        img: projectFour,
-        description: 'Fullstack project created with ReactJS Python and SQL',
+        img: projectTwo,
+        description: 'Solo fullstack project created with JS MongoDB and NodeJS',
         links: [
-            { href: 'https://github.com/GlitterAngle/Vogue-Estate-Backend', text: 'Backend Code' },
-            { href: 'https://github.com/GlitterAngle/Vogue-Estates-FrontEnd', text: 'Frontend Code' }
+            { href: 'https://github.com/GlitterAngle/Recipe-Backend-', text: 'Backend Code' },
+            { href: 'https://github.com/GlitterAngle/Recipe-Frontend', text: 'Frontend Code' }
         ]
+    },
+    {
+        img: projectOne,
+        description: 'Solo frontend project created with JS HTML and CSS',
+        links: [{ href: 'https://github.com/GlitterAngle/Pong', text: 'Code' }]
     }
 ];
 
@@ -70,3 +70,67 @@ const ProjectComponent = forwardRef(() => {
 
 
 export default ProjectComponent
+
+
+// import React, { forwardRef } from 'react'
+// import projectOne from '../../assets/projects/projectOne.png'
+// import projectTwo from '../../assets/projects/prjectTwo.png'
+// import projectThree from '../../assets/projects/projectThree.png'
+// import projectFour from '../../assets/projects/projectFour.png'
+// import './ProjectComponent.css'
+
+// const ProjectComponent = forwardRef(() => {
+//     return (
+//         <div id='projects' className='mt-20'>
+//             <div >
+//                 <div id='outerBorder'>
+//                     <div id='innerBorder'>
+//                         <div className=" row-span-1 p-4 " id='project1'>
+//                             <img src={projectOne}></img>
+//                         </div>
+//                         <div>
+//                             <p>Solo frontend project created with JS HTML and CSS</p>
+//                             <a href='https://github.com/GlitterAngle/Pong' className='underline'>Code</a>
+//                         </div>
+//                     </div>
+//                 </div>
+//                 <div id='rightOuterBorder'>
+//                     <div id='rightInnerBorder'>
+//                         <div className=" rounded-full object-cover row-span-1 p-4">
+//                             <img src={projectTwo} className='image'></img>
+//                         </div> 
+//                         <div>
+//                     <p>Solo fullstack project created with JS MongoDB and NodeJS</p>
+//                     <a href='https://github.com/GlitterAngle/Recipe-Backend-' className='underline mr-2'>Backend Code</a>
+
+//                     <a href='https://github.com/GlitterAngle/Recipe-Frontend' className='underline'>Frontend Code </a>
+//                 </div>
+//                     </div>
+//                 </div>
+               
+//                 <div id='outerBorder'>
+//                     <div id='innerBorder'>
+//                         <div className=" rounded-full row-span-1 place-self-center p-4">
+//                             <img src={projectThree}></img>
+//                         </div><p>Fullstack project created with ReactJS MongoDB and NodeJS</p>
+//                     <a href='https://github.com/GlitterAngle/life-choices-server' className='underline mr-2'>Backend Code</a>
+//                     <a href='https://github.com/GlitterAngle/life-choices-frontend' className='underline'>Frontend Code </a>
+//                     </div>
+                    
+//                 </div>
+//                 <div id='rightOuterBorder'>
+//                     <div id='rightInnerBorder'>
+//                         <div className=" rounded-full row-span-1 place-self-center p-4">
+//                             <img src={projectFour}></img>
+//                         </div><p>Fullstack project created with ReactJS Python and SQL</p>
+//                     <a href='https://github.com/GlitterAngle/Vogue-Estate-Backend' className='underline mr-2'>Backend Code</a>
+//                     <a href='https://github.com/GlitterAngle/Vogue-Estates-FrontEnd' className='underline'>Frontend Code </a>
+//                     </div>
+                    
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// })
+
+// export default ProjectComponent
