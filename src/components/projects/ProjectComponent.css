@@ -1,0 +1,50 @@
+#outerBorder{
+    background-color: #1885819d;
+    width: 900px;
+    height: 600px;
+    position: relative;
+    margin: 50px;
+    border-radius: 12px;
+}
+
+#innerBorder{
+    background-color: #00c6bf91;
+    width: 880px;
+    height: 600px;
+    position: absolute;
+    top: 20px; 
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+}
+
+#rightOuterBorder{
+    background-color: #1885819d;
+    width: 900px;
+    height: 600px;
+    position: relative;
+    margin: 50px;
+    border-radius: 12px;
+    float: right;
+}
+
+#rightInnerBorder{
+    background-color: #00c6bf91;
+    width: 880px;
+    height: 600px;
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#innerBorder img, #rightInnerBorder img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
