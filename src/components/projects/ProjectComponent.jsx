@@ -3,9 +3,15 @@ import projectOne from '../../assets/projects/projectOne.png'
 import projectTwo from '../../assets/projects/prjectTwo.png'
 import projectThree from '../../assets/projects/projectThree.png'
 import projectFour from '../../assets/projects/projectFour.png'
+import projectFive from '../../assets/projects/projectFive.png'
 import './ProjectComponent.css'
 
 const projects = [
+    {
+        img: projectFive,
+        description: 'Working with a small team I handled the implimentation and integration of data form Sanity CMS',
+        links: [{href:'https://www.offbend.com/'}]
+    },
     {
         img: projectOne,
         description: 'Solo frontend project created with JS HTML and CSS',
