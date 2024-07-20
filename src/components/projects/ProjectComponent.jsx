@@ -10,7 +10,7 @@ const projects = [
     {
         img: projectFive,
         description: 'Working with a small team I handled the implimentation and integration of data form Sanity CMS',
-        links: [{href:'https://www.offbend.com/'}]
+        links: [{href:'https://www.offbend.com/', text: 'Live Projet'}]
     },
     {
         img: projectFour,
