@@ -25,9 +25,9 @@
 }
 
 body {
-  background: linear-gradient(to right top,  #73372c, #995454, #be7481, #e097b0, #ffbce1 );
+  background-image: linear-gradient(to right, #061f45, #004d7a, #008793, #00bf72, #a8eb12);;
   background-size: 200% 200%;
-  animation: gradientBackground 15s infinite;
+  animation: gradientBackground 25s infinite;
   transition: background-color 1s ease-in-out;
 }
 

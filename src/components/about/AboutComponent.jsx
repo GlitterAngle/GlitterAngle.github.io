@@ -1,5 +1,6 @@
 import React, { forwardRef, useEffect, useRef } from 'react';
-import headshot from '../../assets/headshot/DSC01508-Edit.jpg';
+// import headshot from '../../assets/headshot/DSC01508-Edit.jpg';
+import headshot from '../../assets/headshot/DSC01508-Edit-removebg-preview.png';
 import css from '../../assets/tech/css-3.svg';
 import express from '../../assets/tech/expressjs-icon.svg';
 import git from '../../assets/tech/git-icon.svg';
@@ -76,7 +77,7 @@ const About = forwardRef(() => {
         <img
           src={headshot}
           alt='headshot'
-          className="border-2 border-customBrown h-48 w-48 md:h-96 md:w-96 lg:h-90 lg:w-90 rounded-full object-cover object-center place-self-center lg:row-span-2"
+          className="border-2 border-transparent h-48 w-48 md:h-96 md:w-96 lg:h-90 lg:w-90 rounded-full object-cover object-center place-self-center lg:row-span-2"
         />
         <div className='space-y-8'>
           <p className='indent-8 mb-8 max-w-xs sm:max-w-sm mx-auto lg:max-w-full lg:text-xl'>
