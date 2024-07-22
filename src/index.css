@@ -37,5 +37,9 @@ body {
   cursor: pointer;
   transition: border-color 0.25s;
 } */
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 
